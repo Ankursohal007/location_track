@@ -1,4 +1,4 @@
-package com.uc.my_plugins.provider
+package com.uc.uclocation.provider
 
 enum class LocationClient(val value: Int) {
     Google(0), Android(1);

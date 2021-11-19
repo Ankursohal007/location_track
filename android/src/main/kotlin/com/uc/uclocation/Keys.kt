@@ -1,4 +1,4 @@
-package com.uc.my_plugins
+package com.uc.uclocation
 
 class Keys {
     companion object {

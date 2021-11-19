@@ -8,7 +8,7 @@
 #import "DisposePluggable.h"
 #import "PreferencesManager.h"
 #import "Globals.h"
-#import "BackgroundLocatorPlugin.h"
+#import "UCLocation.h"
 
 @implementation DisposePluggable
 

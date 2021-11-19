@@ -1,4 +1,4 @@
-package com.uc.my_plugins.provider
+package com.uc.uclocation.provider
 
 interface BLLocationProvider {
     var listener: LocationUpdateListener?

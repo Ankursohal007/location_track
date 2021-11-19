@@ -1,4 +1,4 @@
-package com.uc.my_plugins
+package com.uc.uclocation
 
 import android.app.*
 import android.content.Context
@@ -13,10 +13,10 @@ import io.flutter.FlutterInjector
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
-import com.uc.my_plugins.pluggables.DisposePluggable
-import com.uc.my_plugins.pluggables.InitPluggable
-import com.uc.my_plugins.pluggables.Pluggable
-import com.uc.my_plugins.provider.*
+import com.uc.uclocation.pluggables.DisposePluggable
+import com.uc.uclocation.pluggables.InitPluggable
+import com.uc.uclocation.pluggables.Pluggable
+import com.uc.uclocation.provider.*
 import java.util.HashMap
 
 class IsolateHolderService : MethodChannel.MethodCallHandler, LocationUpdateListener, Service() {

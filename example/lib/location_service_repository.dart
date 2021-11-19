@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:isolate';
 import 'dart:math';
 import 'dart:ui';
-import 'package:my_plugins/location_dto.dart';
+import 'package:uclocation/location_dto.dart';
 import 'file_manager.dart';
 
 class LocationServiceRepository {

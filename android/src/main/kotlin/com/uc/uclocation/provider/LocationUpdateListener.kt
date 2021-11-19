@@ -1,4 +1,4 @@
-package com.uc.my_plugins.provider
+package com.uc.uclocation.provider
 
 import java.util.HashMap
 

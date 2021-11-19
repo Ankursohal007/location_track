@@ -1,4 +1,4 @@
-name: my_plugins
+name: uclocation
 description: Plugin for tracking location in background.
 version: 0.0.1
 homepage: https://github.com/Ankursohal007/location_track
@@ -28,10 +28,12 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.uc.my_plugins
-        pluginClass: MyPluginsPlugin
+        package: com.uc.uclocation
+        pluginClass: UCLocation
+
+
       ios:
-        pluginClass: MyPluginsPlugin
+        pluginClass: UCLocation
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

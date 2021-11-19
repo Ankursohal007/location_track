@@ -1,4 +1,4 @@
-import 'package:my_plugins/keys.dart';
+import 'package:uclocation/keys.dart';
 
 import 'locator_settings.dart';
 

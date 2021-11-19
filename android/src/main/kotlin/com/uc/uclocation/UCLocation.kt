@@ -1,4 +1,4 @@
-package com.uc.my_plugins
+package com.uc.uclocation
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -19,11 +19,11 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry
-import com.uc.my_plugins.pluggables.DisposePluggable
-import com.uc.my_plugins.pluggables.InitPluggable
+import com.uc.uclocation.pluggables.DisposePluggable
+import com.uc.uclocation.pluggables.InitPluggable
 
 /** MyPluginsPlugin */
-class MyPluginsPlugin : MethodCallHandler, FlutterPlugin, PluginRegistry.NewIntentListener,
+class UCLocation : MethodCallHandler, FlutterPlugin, PluginRegistry.NewIntentListener,
   ActivityAware {
   private var context: Context? = null
   private var activity: Activity? = null
@@ -199,7 +199,7 @@ class MyPluginsPlugin : MethodCallHandler, FlutterPlugin, PluginRegistry.NewInte
     fun registerAfterBoot(context: Context) {
       val settings = PreferencesManager.getSettings(context)
 
-      val plugin = MyPluginsPlugin()
+      val plugin = UCLocation()
       plugin.context = context
 
       initializeService(context, settings)
@@ -254,7 +254,7 @@ class MyPluginsPlugin : MethodCallHandler, FlutterPlugin, PluginRegistry.NewInte
   }
 
   private fun onAttachedToEngine(context: Context, messenger: BinaryMessenger) {
-    val plugin = MyPluginsPlugin()
+    val plugin = UCLocation()
     plugin.context = context
 
     channel = MethodChannel(messenger, Keys.CHANNEL_ID)

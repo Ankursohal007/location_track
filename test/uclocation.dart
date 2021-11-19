@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 
 void main() {
-  const MethodChannel channel = MethodChannel('my_plugins');
+  const MethodChannel channel = MethodChannel('uclocation');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 

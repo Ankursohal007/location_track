@@ -1,4 +1,4 @@
-package com.uc.my_plugins
+package com.uc.uclocation
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,7 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.view.FlutterCallbackInformation
-import com.uc.my_plugins.provider.LocationRequestOptions
+import com.uc.uclocation.provider.LocationRequestOptions
 import java.util.concurrent.atomic.AtomicBoolean
 
 internal fun IsolateHolderService.startLocatorService(context: Context) {

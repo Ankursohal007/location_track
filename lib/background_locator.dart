@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:my_plugins/settings/android_settings.dart';
-import 'package:my_plugins/settings/ios_settings.dart';
-import 'package:my_plugins/utils/settings_util.dart';
+import 'package:uclocation/settings/android_settings.dart';
+import 'package:uclocation/settings/ios_settings.dart';
+import 'package:uclocation/utils/settings_util.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 

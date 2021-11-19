@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'dart:ui';
 
-import 'package:my_plugins/keys.dart';
-import 'package:my_plugins/location_dto.dart';
-import 'package:my_plugins/settings/android_settings.dart';
-import 'package:my_plugins/settings/ios_settings.dart';
+import 'package:uclocation/keys.dart';
+import 'package:uclocation/location_dto.dart';
+import 'package:uclocation/settings/android_settings.dart';
+import 'package:uclocation/settings/ios_settings.dart';
 
 class SettingsUtil {
   static Map<String, dynamic> getArgumentsMap(

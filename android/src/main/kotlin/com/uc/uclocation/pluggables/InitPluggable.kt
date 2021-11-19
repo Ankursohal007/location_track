@@ -1,10 +1,10 @@
-package com.uc.my_plugins.pluggables
+package com.uc.uclocation.pluggables
 import android.content.Context
 import android.os.Handler
 import io.flutter.plugin.common.MethodChannel
-import com.uc.my_plugins.IsolateHolderService
-import com.uc.my_plugins.Keys
-import com.uc.my_plugins.PreferencesManager
+import com.uc.uclocation.IsolateHolderService
+import com.uc.uclocation.Keys
+import com.uc.uclocation.PreferencesManager
 
 class InitPluggable : Pluggable {
     private var isInitCallbackCalled = false

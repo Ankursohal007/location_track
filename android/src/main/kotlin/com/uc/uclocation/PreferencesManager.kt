@@ -1,9 +1,9 @@
-package com.uc.my_plugins
+package com.uc.uclocation
 
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.uc.my_plugins.provider.LocationClient
+import com.uc.uclocation.provider.LocationClient
 
 class PreferencesManager {
     companion object {

@@ -1,4 +1,4 @@
-package com.uc.my_plugins.pluggables
+package com.uc.uclocation.pluggables
 
 import android.content.Context
 

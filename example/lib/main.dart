@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:ffi';
 import 'dart:isolate';
 import 'dart:ui';
-import 'package:my_plugins/background_locator.dart';
-import 'package:my_plugins/location_dto.dart';
-import 'package:my_plugins/settings/android_settings.dart';
-import 'package:my_plugins/settings/ios_settings.dart';
-import 'package:my_plugins/settings/locator_settings.dart';
+import 'package:uclocation/background_locator.dart';
+import 'package:uclocation/location_dto.dart';
+import 'package:uclocation/settings/android_settings.dart';
+import 'package:uclocation/settings/ios_settings.dart';
+import 'package:uclocation/settings/locator_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 

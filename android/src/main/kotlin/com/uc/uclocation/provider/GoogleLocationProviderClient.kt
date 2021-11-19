@@ -1,4 +1,4 @@
-package com.uc.my_plugins.provider
+package com.uc.uclocation.provider
 
 import android.annotation.SuppressLint
 import android.content.Context

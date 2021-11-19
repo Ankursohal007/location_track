@@ -1,9 +1,9 @@
-package com.uc.my_plugins.provider
+package com.uc.uclocation.provider
 
 import android.location.Location
 import android.os.Build
 import com.google.android.gms.location.LocationResult
-import com.uc.my_plugins.Keys
+import com.uc.uclocation.Keys
 import java.util.HashMap
 
 class LocationParserUtil {
