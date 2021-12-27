@@ -27,7 +27,7 @@ class Keys {
         val CHANNEL_ID = "locator_plugin"
 
         @JvmStatic
-        val BACKGROUND_CHANNEL_ID = "app.rekab/locator_plugin_background"
+        val BACKGROUND_CHANNEL_ID = "locator_plugin_background"
 
         @JvmStatic
         val METHOD_SERVICE_INITIALIZED = "LocatorService.initialized"

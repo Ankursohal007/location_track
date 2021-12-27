@@ -3,7 +3,7 @@
 # Run `pod lib lint my_plugins.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'my_plugins'
+  s.name             = 'uclocation'
   s.version          = '0.0.1'
   s.summary          = 'A new Flutter project.'
   s.description      = <<-DESC

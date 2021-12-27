@@ -1,8 +1,6 @@
 //
 //  PreferencesManager.m
-//  background_locator
-//
-//  Created by Mehdi Sohrabi on 6/28/20.
+//  uc_location
 //
 
 #import "PreferencesManager.h"

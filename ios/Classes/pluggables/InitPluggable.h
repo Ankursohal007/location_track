@@ -1,9 +1,6 @@
 //
 //  InitPluggable.h
-//  background_locator
-//
-//  Created by Mehdok on 6/7/21.
-//
+//  uc_location
 
 #import <Foundation/Foundation.h>
 #import "Pluggable.h"

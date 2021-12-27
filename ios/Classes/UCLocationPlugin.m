@@ -1,11 +1,12 @@
-#import "BackgroundLocatorPlugin.h"
+#import "UCLocationPlugin.h"
 #import "Globals.h"
 #import "Utils/Util.h"
 #import "Preferences/PreferencesManager.h"
 #import "InitPluggable.h"
 #import "DisposePluggable.h"
 
-@implementation BackgroundLocatorPlugin {
+
+@implementation UCLocationPlugin {
     FlutterEngine *_headlessRunner;
     FlutterMethodChannel *_callbackChannel;
     FlutterMethodChannel *_mainChannel;
@@ -14,27 +15,30 @@
     CLLocation* _lastLocation;
 }
 
+
 static FlutterPluginRegistrantCallback registerPlugins = nil;
-static BackgroundLocatorPlugin *instance = nil;
+static UCLocationPlugin *instance = nil;
 
 #pragma mark FlutterPlugin Methods
 
 + (void)registerWithRegistrar:(nonnull NSObject<FlutterPluginRegistrar> *)registrar {
     @synchronized(self) {
         if (instance == nil) {
-            instance = [[BackgroundLocatorPlugin alloc] init:registrar];
+            instance = [[UCLocationPlugin alloc] init:registrar];
             [registrar addApplicationDelegate:instance];
         }
     }
 }
 
+
 + (void)setPluginRegistrantCallback:(FlutterPluginRegistrantCallback)callback {
     registerPlugins = callback;
 }
 
-+ (BackgroundLocatorPlugin *) getInstance {
++ (UCLocationPlugin *) getInstance {
     return instance;
 }
+
 
 - (void)invokeMethod:(NSString*_Nonnull)method arguments:(id _Nullable)arguments {
     // Return if flutter engine is not ready
@@ -52,7 +56,7 @@ static BackgroundLocatorPlugin *instance = nil;
     [callHelper handleMethodCall:call result:result delegate:self];
 }
 
-//https://medium.com/@calvinlin_96474/ios-11-continuous-background-location-update-by-swift-4-12ce3ac603e3
+
 // iOS will launch the app when new location received
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -108,7 +112,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         if([PreferencesManager isObservingRegion]) {
             [self observeRegionForLocation: location];
             [_locationManager stopUpdatingLocation];
-
+        }
     }
 }
 

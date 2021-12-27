@@ -12,7 +12,7 @@ import 'callback_dispatcher.dart';
 import 'keys.dart';
 import 'location_dto.dart';
 
-class BackgroundLocator {
+class UClocation {
   static const MethodChannel _channel = const MethodChannel(Keys.CHANNEL_ID);
 
   static Future<void> initialize() async {

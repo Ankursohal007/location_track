@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:ffi';
 import 'dart:isolate';
 import 'dart:ui';
-import 'package:uclocation/background_locator.dart';
+import 'package:uclocation/uclocation.dart';
 import 'package:uclocation/location_dto.dart';
 import 'package:uclocation/settings/android_settings.dart';
 import 'package:uclocation/settings/ios_settings.dart';
@@ -15,7 +15,11 @@ import 'file_manager.dart';
 import 'location_callback_handler.dart';
 import 'location_service_repository.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  /// Before init Location Plugin
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -76,7 +80,7 @@ class _MyAppState extends State<MyApp> {
       return;
     }
 
-    await BackgroundLocator.updateNotificationText(
+    await UClocation.updateNotificationText(
         title: "new location received",
         msg: "${DateTime.now()}",
         bigMsg: "${data.latitude}, ${data.longitude}");
@@ -84,10 +88,10 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initPlatformState() async {
     print('Initializing...');
-    await BackgroundLocator.initialize();
+    await UClocation.initialize();
     logStr = await FileManager.readLogFile();
     print('Initialization done');
-    final _isRunning = await BackgroundLocator.isServiceRunning();
+    final _isRunning = await UClocation.isServiceRunning();
     setState(() {
       isRunning = _isRunning;
     });
@@ -160,8 +164,8 @@ class _MyAppState extends State<MyApp> {
   }
 
   void onStop() async {
-    await BackgroundLocator.unRegisterLocationUpdate();
-    final _isRunning = await BackgroundLocator.isServiceRunning();
+    await UClocation.unRegisterLocationUpdate();
+    final _isRunning = await UClocation.isServiceRunning();
     setState(() {
       isRunning = _isRunning;
     });
@@ -170,7 +174,7 @@ class _MyAppState extends State<MyApp> {
   void _onStart() async {
     if (await _checkLocationPermission()) {
       await _startLocator();
-      final _isRunning = await BackgroundLocator.isServiceRunning();
+      final _isRunning = await UClocation.isServiceRunning();
 
       setState(() {
         isRunning = _isRunning;
@@ -196,14 +200,14 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> _startLocator() async{
     Map<String, dynamic> data = {'countInit': 1};
-    return await BackgroundLocator.registerLocationUpdate(LocationCallbackHandler.callback,
+    return await UClocation.registerLocationUpdate(LocationCallbackHandler.callback,
         initCallback: LocationCallbackHandler.initCallback,
         initDataCallback: data,
         disposeCallback: LocationCallbackHandler.disposeCallback,
-        iosSettings: IOSSettings(
+        iosSettings: const IOSSettings(
             accuracy: LocationAccuracy.NAVIGATION, distanceFilter: 0),
         autoStop: false,
-        androidSettings: AndroidSettings(
+        androidSettings: const AndroidSettings(
             accuracy: LocationAccuracy.NAVIGATION,
             interval: 5,
             distanceFilter: 0,
