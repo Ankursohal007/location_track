@@ -1,9 +1,6 @@
 //
 //  MethodCallHelper.h
-//  background_locator
-//
-//  Created by Mehdi Sohrabi on 6/28/20.
-//
+//  uc_location
 
 #import <Foundation/Foundation.h>
 #import <Flutter/Flutter.h>

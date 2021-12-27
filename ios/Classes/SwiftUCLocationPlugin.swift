@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SwiftMyPluginsPlugin: NSObject, FlutterPlugin {
+public class SwiftUCLocationPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "my_plugins", binaryMessenger: registrar.messenger())
-    let instance = SwiftMyPluginsPlugin()
+    let channel = FlutterMethodChannel(name: "UCLocationPlugin", binaryMessenger: registrar.messenger())
+    let instance = SwiftUCLocationPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

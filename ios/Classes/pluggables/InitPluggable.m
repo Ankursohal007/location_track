@@ -1,14 +1,12 @@
 //
 //  InitPluggable.m
-//  background_locator
-//
-//  Created by Mehdok on 6/7/21.
+//  uc_location
 //
 
 #import "InitPluggable.h"
 #import "PreferencesManager.h"
 #import "Globals.h"
-#import "BackgroundLocatorPlugin.h"
+#import "UCLocationPlugin.h"
 
 @implementation InitPluggable {
     BOOL isInitCallbackCalled;
@@ -32,7 +30,7 @@
                          kArgInitCallback : @([PreferencesManager getCallbackHandle:kInitCallbackKey]),
                          kArgInitDataCallback: initialDataDictionary
                          };
-        [[BackgroundLocatorPlugin getInstance] invokeMethod:kBCMInit arguments:map];
+        [[UCLocationPlugin getInstance] invokeMethod:kBCMInit arguments:map];
     }
     isInitCallbackCalled = YES;
 }

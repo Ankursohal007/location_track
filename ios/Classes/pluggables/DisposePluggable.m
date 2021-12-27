@@ -1,14 +1,11 @@
 //
 //  DisposePluggable.m
-//  background_locator
-//
-//  Created by Mehdok on 6/7/21.
-//
+//  uc_location
 
 #import "DisposePluggable.h"
 #import "PreferencesManager.h"
 #import "Globals.h"
-#import "UCLocation.h"
+#import "UCLocationPlugin.h"
 
 @implementation DisposePluggable
 
@@ -16,7 +13,7 @@
     NSDictionary *map = @{
                      kArgDisposeCallback : @([PreferencesManager getCallbackHandle:kDisposeCallbackKey])
                      };
-    [[BackgroundLocatorPlugin getInstance] invokeMethod:kBCMDispose arguments:map];
+    [[UCLocationPlugin getInstance] invokeMethod:kBCMDispose arguments:map];
 }
 
 - (void)onServiceStart:(NSDictionary *)initialDataDictionary {
