@@ -87,4 +87,5 @@ class LocationServiceRepository {
         " " +
         dp(locationDto.longitude, 4).toString();
   }
+
 }

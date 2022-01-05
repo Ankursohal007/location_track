@@ -78,4 +78,5 @@ class UClocation {
 
     await _channel.invokeMethod(Keys.METHOD_PLUGIN_UPDATE_NOTIFICATION, arg);
   }
+
 }
